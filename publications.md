@@ -7,7 +7,7 @@ class: wide
 ---
 
  <sup>**Shared first author*</sup> 
-- **Yi, W.**, Palmer, C., Serian, A., Roy, M. (2024). Individual endogenous rhythms maximize music-induced pain reduction. submitted.
+- **Yi, W.**, Palmer, C., Serian, A., Roy, M. (2025). Individualizing musical tempo to spontaneous rates maximizes music-induced hypoalgesia, PAIN, in press.
 
 - Høffding, S.*, **Yi, W.** *, Lippert, E., Gonzalez Sanchez, V., Bishop, L., Laeng, B., Danielsen, A.,
 Jensenius, A. & Wallot, S. (2023). Into the Hive-mind: Shared absorption and cardiac interrelations in expert and student string quartets. Music & Science, 6, doi: 10.1177/20592043231168597.

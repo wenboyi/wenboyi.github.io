@@ -18,6 +18,11 @@ class: wide
   - Advisors: [Dr. Alexander Refsum Jensenius](https://www.uio.no/ritmo/english/people/management/alexanje/index.html) and [Dr. Simon Høffding](https://portal.findresearcher.sdu.dk/en/persons/simon-h%C3%B8ffding)
   - Thesis: [When Hearts Beat as One – Cardiac Dynamics and Synchrony in String Quartet Performances](https://www.duo.uio.no/handle/10852/96059)
   - GPA: 3.88/4.0
+- **M.A. in Sound Recording**: Communication University of China, China (2019-2020, withdrawal)
+   - GPA: 3.86/4.0
+- **B.A. in Sound Recording**: Nanjing University of the Arts, China (2015-2019)
+   - GPA: 89.5/100, RANK 1/21
+
 
 ### Experience
 - Guest Researcher, FRONT Neurolab, Department of Psychology, University of Oslo, Norway, 2022-2024
@@ -25,6 +30,7 @@ class: wide
 - Research Assistant, RITMO Centre for Interdisciplinary Studies in Rhythm, Time and Motion, Oslo, Norway, 2020-2022
 
 ### Selected Honors and Awards
+- Centre for Research on Brain, Language and Music Graduate Student Award, 2024
 - NSERC-CREATE Graduate Award in Complex Dynamics, 2022-2024
 - Graduate Excellence Award, 2022-2024
 - Centre for Research on Brain, Language and Music Travel Award, 2024
@@ -48,8 +54,11 @@ class: wide
 
 
 ### Teaching Experience
-- Teaching Assistant for PSYC337: Introduction to Psychopathology (Summer 2024)
-- Teaching Assistant for PSYC212: Perception (Winter 2024)
+- Teaching Assistant for PSYC212: Perception (Winter, 2025)
+- Teaching Assistant for PSYC306: Research Methods in Psychology (Fall, 2024)
+- Teaching Assistant for PSYC339: Intro to Applied Psychology (Fall, 2024)
+- Teaching Assistant for PSYC337: Introduction to Psychopathology (Summer, 2024)
+- Teaching Assistant for PSYC212: Perception (Winter, 2024)
 - Teaching Assistant for PSYC352: Research Methods and Laboratory in Cognitive Psychology (Fall, 2023)
 
 
