@@ -5,31 +5,39 @@ search: false
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
 
 body {
-    font-size: 17px; // Change this value to your preferred font size
+    font-size: 17px;
 }
 
 h1 {
-    font-size: 1.7em; // Adjust as needed
+    font-size: 1.7em;
 }
 
 h2 {
-    font-size: 1.5em; // Adjust as needed
+    font-size: 1.5em;
 }
 
 p {
-    font-size: 1em; // Adjust as needed
+    font-size: 1em;
 }
 
-.page__content {
-    max-width: 8000px; // Adjust this value to make the content wider
-    margin: 0 auto;    // Center the content
-    padding: 0 15px;   // Add some padding to the sides
+// Custom styles for the avatar only
+.author__avatar {
+  img {
+    max-width: 200px;
+    border-radius: 10%;
+  }
 }
 
-/* assets/css/main.scss */
-/*@import "minimal-mistakes";*/
+.sidebar .author__avatar {
+  img {
+    padding: 5px;
+    border: none;
+    max-width: 200px;
+    width: 100%;
+  }
+}
 

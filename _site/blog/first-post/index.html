@@ -14,9 +14,9 @@
 <meta name="description" content="This is my first post on my new personal website!">
 
 
-  <meta name="author" content="Wenbo YI">
+  <meta name="author" content="Wenbo YI 易闻波">
   
-  <meta property="article:author" content="Wenbo YI">
+  <meta property="article:author" content="Wenbo YI 易闻波">
   
 
 
@@ -75,6 +75,10 @@
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
+  
+    <script src="/assets/css/main.css"></script>
+  
+
 
     <!-- start custom head snippets -->
 
@@ -83,15 +87,7 @@
 <!-- end custom head snippets -->
 
   </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0LH4SVGEFK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-0LH4SVGEFK');
-</script>
   <body class="layout--single" dir="ltr">
     <nav class="skip-links">
   <ul>
@@ -126,6 +122,11 @@
               >Curriculum Vitae</a>
             </li></ul>
         
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
@@ -155,14 +156,14 @@
   
     <div class="author__avatar">
       <a href="http://localhost:4000/">
-        <img src="/assets/image/IMG_2666.JPG" alt="Wenbo YI" itemprop="image" class="u-photo">
+        <img src="/assets/image/IMG_2666.JPG" alt="Wenbo YI 易闻波" itemprop="image" class="u-photo">
       </a>
     </div>
   
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Wenbo YI</a>
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Wenbo YI 易闻波</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
@@ -177,7 +178,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Monteal, Quebec, Canada</span>
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Montreal, Quebec, Canada</span>
         </li>
       
 
@@ -388,6 +389,19 @@
     </div>
 
     
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" role="search">
+    <label class="sr-only" for="cse-search-input-box-id">
+      Enter your search term...
+    </label>
+    <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results">
+    <gcse:searchresults-only></gcse:searchresults-only>
+  </div></div>
+
+      </div>
+    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -420,7 +434,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">Wenbo Yi's Homepage</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div> -->
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">Wenbo Yi's Homepage</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div> -->
 
 <div class="page__footer-follow">
   <ul class="social-icons">
@@ -442,7 +456,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 Wenbo Yi. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2025 Wenbo Yi. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -452,7 +466,36 @@
   <script src="/assets/js/main.min.js"></script>
 
 
+<script>
+  (function () {
+    var cx = '';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
 
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+    $(document).ready(function () {
+      $('input#cse-search-input-box-id').on('keyup', function () {
+        googleCustomSearchExecute();
+      });
+    });
+  
+</script>
 
 
 
