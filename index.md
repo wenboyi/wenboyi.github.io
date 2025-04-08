@@ -15,6 +15,10 @@ My research focuses on human cognitive processes in music perception and product
 
 Beyond academia, I have a deep passion for classical music. My journey as a concert pianist began at age five, leading to performances in major concert halls and multiple championships at national and provincial levels in China. These experiences have profoundly shaped my interest in music as both an art form and a fundamental perspective on human behavior in science. Nowadays, you can (frequently) find me in Montreal's Place des Arts auditorium:)
 
+## Recent Updates
+
+The first journal article of my Ph.D. is now online in [*PAIN*](https://journals.lww.com/pain/fulltext/9900/individualizing_musical_tempo_to_spontaneous_rates.810.aspx)! It explores how we can better utilize music tempo as a tool to reduce pain. The study has already been featured in several media outlets, including:[BBC Music Magazine](https://www.classical-music.com/news/music-and-pain-relief), [Daily Mail](https://www.dailymail.co.uk/health/article-14402319/Listening-music-reduce-pain-patients-suffer-injury-research-shows.html), [New York Post](https://nypost.com/2025/02/07/health/music-with-this-personal-characteristic-could-relieve-pain/), [CityNews Montreal](https://montreal.citynews.ca/2025/02/11/music-synchronized-internal-rhythms-pain-relief/)
+
 ## Contact Information
 
 <div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">

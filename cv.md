@@ -30,6 +30,7 @@ class: wide
 - Research Assistant, RITMO Centre for Interdisciplinary Studies in Rhythm, Time and Motion, Oslo, Norway, 2020-2022
 
 ### Selected Honors and Awards
+- Great Travel Award, 2025
 - Centre for Research on Brain, Language and Music Graduate Student Award, 2024
 - NSERC-CREATE Graduate Award in Complex Dynamics, 2022-2024
 - Graduate Excellence Award, 2022-2024
@@ -42,11 +43,12 @@ class: wide
 - First Prize, Second YAMAHA China National Piano Competition, 2016
 
 ### Talk & Posters
+- **Yi, W.**, Palmer, C. (2025). Causal Relations Between Behavioral and Physiological Dynamics in Interpersonal Coordination, New England Sequencing & Timing Conference 2025, Connecticut, USA.
 - **Yi, W.**, Palmer, C., Roy, M. (2024). Individual endogenous rhythms maximize music-induced pain reduction. Society for Music Perception and Cognition Conference 2024, Banff, Canada.
 - **Yi, W.**, Palmer, C., Roy, M. (2024). Individual endogenous rhythms maximize music-induced pain reduction. The Neurosciences and Music Conference, Helsinki, Finland.
 - **Yi, W.**, Palmer, C., Roy, M. (2024). Individual endogenous rhythms maximize music-induced pain reduction. CRBLM Conference, Montreal, Canada.
-- Ferris, C., Scheuric, R., **Yi, W.**, Palmer, C., Sheldon, S. (2024). Dissociable neural mechanisms for encoding of memories associated with conceptual and visual-perceptual detail. CRBLM Conference, Montreal, Canada.
-- Ferris, C., Scheuric, R., **Yi, W.**, Palmer, C., Sheldon, S. (2024). Dissociable neural mechanisms for encoding of memories associated with conceptual and visual-perceptual detail. Cognitive Neuroscience Society Conference, Toronto, Canada.
+- Ferris, C., Scheurich, R., **Yi, W.**, Palmer, C., Sheldon, S. (2024). Dissociable neural mechanisms for encoding of memories associated with conceptual and visual-perceptual detail. CRBLM Conference, Montreal, Canada.
+- Ferris, C., Scheurich, R., **Yi, W.**, Palmer, C., Sheldon, S. (2024). Dissociable neural mechanisms for encoding of memories associated with conceptual and visual-perceptual detail. Cognitive Neuroscience Society Conference, Toronto, Canada.
 - **Yi, W.**, Palmer, C., Roy, M. (2023). Effects of musical tempo and individual differences on pain perception. Entrainment Workshop, RITMO, University of Oslo, Norway.
 - **Yi, W.**, Palmer, C., Roy, M. (2023). Effects of musical tempo and spontaneous rates on pain perception. NSERC-CREATE Symposium in Nonlinear Dynamics, Montreal, Canada.
 - Bishop, L., Høffding, S., **Yi, W.**, Laeng, B. (2022). Eyes and hearts of adepts and experts: Physiological rhythms in string quartets. Conference on Music and Eye-tracking, Max Planck Institute for Empirical Aesthetics, Frankfurt, Germany.
@@ -62,12 +64,5 @@ class: wide
 - Teaching Assistant for PSYC352: Research Methods and Laboratory in Cognitive Psychology (Fall, 2023)
 
 
-
-
-
-
-
-
-
-Updated: July, 2024
+Updated: April, 2025
 
