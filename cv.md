@@ -30,7 +30,9 @@ class: wide
 - Research Assistant, RITMO Centre for Interdisciplinary Studies in Rhythm, Time and Motion, Oslo, Norway, 2020-2022
 
 ### Selected Honors and Awards
-- Great Travel Award, 2025
+- Fonds de recherche du Québec Nature et technologies Doctoral Fellowship, 2025 - 2028 
+- McGill GREATE Travel Award, 2025
+- Wolfe Fellowship, 2024
 - Centre for Research on Brain, Language and Music Graduate Student Award, 2024
 - NSERC-CREATE Graduate Award in Complex Dynamics, 2022-2024
 - Graduate Excellence Award, 2022-2024
