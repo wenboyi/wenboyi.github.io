@@ -78,6 +78,15 @@
 
     <!-- start custom head snippets -->
 
+<!-- Google tag (gtag.js) - Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0LH4SVGEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0LH4SVGEFK');
+</script>
+
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
@@ -193,6 +202,10 @@
           
         
           
+            <li><a href="https://scholar.google.ca/citations?user=9YmflWMAAAAJ&hl=en&oi=ao" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
+          
+        
+          
         
       
 
@@ -281,23 +294,71 @@
 
       <section class="page__content" itemprop="text">
         
-        <p><sup><em>*Shared first author</em></sup></p>
+        <div id="scholar-stats" style="font-size: 0.85em; color: #555; margin-bottom: 20px;">
+  <a href="https://scholar.google.ca/citations?user=9YmflWMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #4285f4;">
+    <i class="fas fa-graduation-cap"></i> Google Scholar
+  </a>
+  &nbsp;|&nbsp;
+  <span id="scholar-citations">Citations: —</span>
+  &nbsp;|&nbsp;
+  <span id="scholar-hindex">h-index: —</span>
+  &nbsp;|&nbsp;
+  <span id="scholar-i10index">i10-index: —</span>
+</div>
+
+<script>
+(function() {
+  var scholarId = '9YmflWMAAAAJ';
+  var url = 'https://scholar.google.ca/citations?user=' + scholarId + '&hl=en';
+  var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+
+  fetch(proxyUrl)
+    .then(function(response) { return response.text(); })
+    .then(function(html) {
+      // Google Scholar profile page has a table with citation stats
+      // The table cells contain: Citations, h-index, i10-index (All and Since columns)
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(html, 'text/html');
+      var cells = doc.querySelectorAll('#gsc_rsb_st td.gsc_rsb_std');
+      if (cells.length >= 5) {
+        var citations = cells[0].textContent.trim();
+        var hindex = cells[2].textContent.trim();
+        var i10index = cells[4].textContent.trim();
+        document.getElementById('scholar-citations').textContent = 'Citations: ' + citations;
+        document.getElementById('scholar-hindex').textContent = 'h-index: ' + hindex;
+        document.getElementById('scholar-i10index').textContent = 'i10-index: ' + i10index;
+      }
+    })
+    .catch(function() {
+      // If fetch fails, leave the dashes as placeholder
+    });
+})();
+</script>
+
+<p><sup><em>Shared first author</em> *</sup></p>
+
 <ul>
   <li>
-    <p><strong>Yi, W.</strong>, Palmer, C., Serian, A., Roy, M. (2025). Individualizing musical tempo to spontaneous rates maximizes music-induced hypoalgesia, PAIN, in press.</p>
+    <p><strong>Yi, W.</strong>, &amp; Palmer, C. (2026). Respiratory Synchrony and Individual Differences Causally Influence Dyadic Interpersonal Coordination. Psychophysiology, 63(2), e70254. https://doi.org/10.1111/psyp.70254</p>
   </li>
   <li>
-    <p>Høffding, S.*, <strong>Yi, W.</strong> *, Lippert, E., Gonzalez Sanchez, V., Bishop, L., Laeng, B., Danielsen, A.,
+    <p><strong>Yi, W.</strong>, Palmer, C., Serian, A., Roy, M. (2025). Individualizing musical tempo to spontaneous rates maximizes music-induced hypoalgesia. PAIN, doi: 10.1097/j.pain.0000000000003513.</p>
+  </li>
+  <li>
+    <p>Høffding, S., <strong>Yi, W.</strong>, Danielsen, A., Jensenius, A. (2025). Introducing the MusicLab Copenhagen Dataset. Music &amp; Science, 8. https://doi.org/10.1177/20592043241303288</p>
+  </li>
+  <li>
+    <p>Høffding, S.*, <strong>Yi, W.</strong>*, Lippert, E., Gonzalez Sanchez, V., Bishop, L., Laeng, B., Danielsen, A.,
 Jensenius, A. &amp; Wallot, S. (2023). Into the Hive-mind: Shared absorption and cardiac interrelations in expert and student string quartets. Music &amp; Science, 6, doi: 10.1177/20592043231168597.</p>
   </li>
   <li>
-    <p><strong>Yi, W.</strong> (2022). When hearts beat as one - cardiac dynamics and synchrony in string quartet performances. Master Thesis. University of Oslo.</p>
+    <p><strong>Yi, W.</strong> (2022). When hearts beat as one: cardiac dynamics and synchrony in string quartet performances. Master’s thesis. University of Oslo.</p>
   </li>
   <li>
     <p><strong>Yi, W.</strong> (2022). The reproduction of auditory spatial perception in classical music recordings. Audio Engineering, 2022, 46(7). [In Chinese].</p>
   </li>
   <li>
-    <p><strong>Yi, W.</strong> (2021). A pilot study of expressive body movement on audio parameters of piano performances. Proceedings of 2nd Nordic Sound and Music Computing Conference, 24, Copenhagen, Denmark.</p>
+    <p><strong>Yi, W.</strong> (2021). A pilot study of expressive body movement on audio parameters of piano performances. Proceedings of the 2nd Nordic Sound and Music Computing Conference, 24, Copenhagen, Denmark.</p>
   </li>
   <li>
     <p>Hu, Z. &amp; <strong>Yi, W.</strong> (2021). An introduction to the impact of developments in audio technology on the concept of music mixing composition. Advanced Motion Picture Technology, 2021 (05). [In Chinese].</p>
@@ -378,7 +439,7 @@ Jensenius, A. &amp; Wallot, S. (2023). Into the Hive-mind: Shared absorption and
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">Wenbo Yi's Homepage</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div> -->
+<div class="page__footer-copyright">&copy; 2026 <a href="http://localhost:4000">Wenbo Yi's Homepage</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div> -->
 
 <div class="page__footer-follow">
   <ul class="social-icons">
@@ -400,7 +461,7 @@ Jensenius, A. &amp; Wallot, S. (2023). Into the Hive-mind: Shared absorption and
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Wenbo Yi. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 Wenbo Yi. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

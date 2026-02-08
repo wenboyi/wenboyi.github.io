@@ -18,19 +18,21 @@ class: wide
   - Advisors: [Dr. Alexander Refsum Jensenius](https://www.uio.no/ritmo/english/people/management/alexanje/index.html) and [Dr. Simon Høffding](https://portal.findresearcher.sdu.dk/en/persons/simon-h%C3%B8ffding)
   - Thesis: [When Hearts Beat as One – Cardiac Dynamics and Synchrony in String Quartet Performances](https://www.duo.uio.no/handle/10852/96059)
   - GPA: 3.88/4.0
-- **M.A. in Sound Recording**: Communication University of China, China (2019-2020, withdrawal)
+- **M.A. in Sound Recording**: Communication University of China, China (2019-2020, incomplete)
    - GPA: 3.86/4.0
 - **B.A. in Sound Recording**: Nanjing University of the Arts, China (2015-2019)
-   - GPA: 89.5/100, RANK 1/21
+  - GPA: 89.5/100, Rank 1/21
 
 
 ### Experience
-- Guest Researcher, FRONT Neurolab, Department of Psychology, University of Oslo, Norway, 2022-2024
+- Ph.D. Researcher, Sequence Production Lab, Department of Psychology, McGill University, Canada, ongoing
 - Research Intern, Biomedical Data Intelligence Team, National Research Council, Canada, 2023
+- Guest Researcher, FRONT Neurolab, Department of Psychology, University of Oslo, Norway, 2022-2024
 - Research Assistant, RITMO Centre for Interdisciplinary Studies in Rhythm, Time and Motion, Oslo, Norway, 2020-2022
 
 ### Selected Honors and Awards
-- Fonds de recherche du Québec Nature et technologies Doctoral Fellowship, 2025 - 2028 
+- Quebec Science Top 10 Discoveries of the Year (10 découvertes de l'année), 2026
+- Fonds de recherche du Québec Nature et technologies Doctoral Fellowship, 2025-2028 
 - McGill GREATE Travel Award, 2025
 - Wolfe Fellowship, 2024
 - Centre for Research on Brain, Language and Music Graduate Student Award, 2024
@@ -44,7 +46,29 @@ class: wide
 - TongXi Scholarship, 2016
 - First Prize, Second YAMAHA China National Piano Competition, 2016
 
-### Talk & Posters
+### Media Coverage
+- [Four McGill studies make Québec Science’s list of the top 10 discoveries of the year](https://reporter.mcgill.ca/four-mcgill-studies-make-quebec-sciences-list-of-the-top-10-discoveries-of-the-year/), McGill Reporter (January 2026)
+- [Atténuer la douleur par le tempo musical](https://www.quebecscience.qc.ca/sciences/les-10-decouvertes-de-2025/attenuer-douleur-tempo-musical/), Québec Science (January 2026)
+- [Finding the right tempo for pain relief](https://cihr-irsc.gc.ca/e/54392.html), Canadian Institutes
+of Health Research (July 2025)
+- [When using music to alleviate pain, tempo matters](https://nserc-crsng.canada.ca/en/when-using-music-alleviate-pain-tempo-matters), Natural Sciences and Engineering Research Council of Canada (February 2025)
+- [Listening to music can reduce pain for patients who suffer from injury, research shows](https://www.dailymail.co.uk/health/article-14402319/Listening-music-reduce-pain-patients-suffer-injury-research-shows.html), Daily Mail (February 2025)
+- [Music Tempo a Factor in Pain Reduction](https://www.painmedicinenews.com/Clinical-Pain-Medicine/Article/03-25/Music-Tempo-a-Factor-in-Pain-Reduction/76461), Pain Medicine News (March 2025)
+- [Music with this personal characteristic could relieve pain](https://nypost.com/2025/02/07/health/music-with-this-personal-characteristic-could-relieve-pain/), New York Post (February 2025)
+- [Music Tempo for Pain Reduction](https://www.clinicalpainadvisor.com/news/music-tempo-for-pain-reduction/), Clinical Pain Advisor (February 2025)
+- [Music synchronized to internal rhythms could lead to better pain relief](https://montreal.citynews.ca/2025/02/11/music-synchronized-internal-rhythms-pain-relief/), CityNews Montreal (February 2025)
+- [New Study Reveals How Music Eases Pain—But Only at the Right Tempo](https://thedebrief.org/new-study-reveals-how-music-eases-pain-but-only-at-the-right-tempo/), The Debrief (February 2025)
+- [Scientists have found that music eases pain best when it matches our natural rhythm](https://www.classical-music.com/news/music-and-pain-relief), BBC Classical Music (February 2025)
+- [When using music to alleviate pain, tempo matters](https://www.mcgill.ca/newsroom/channels/news/when-using-music-alleviate-pain-tempo-matters-362884), McGill Newsroom (February 2025)
+
+
+
+### Talks & Posters
+- **Yi, W.**, & Palmer, C. (2025). Testing causal relations between behavioral and physiological 
+dynamics during interpersonal coordination. Meeting of the Society for Psychophysiological Research, 
+Montreal. 
+- **Yi, W.**, & Palmer, C. (2025). Testing causal relations between physiological and behavioral 
+synchrony in musical dyads. Joint Action Meeting, Turin, Italy.
 - **Yi, W.**, Palmer, C. (2025). Causal Relations Between Behavioral and Physiological Dynamics in Interpersonal Coordination, New England Sequencing & Timing Conference 2025, Connecticut, USA.
 - **Yi, W.**, Palmer, C., Roy, M. (2024). Individual endogenous rhythms maximize music-induced pain reduction. Society for Music Perception and Cognition Conference 2024, Banff, Canada.
 - **Yi, W.**, Palmer, C., Roy, M. (2024). Individual endogenous rhythms maximize music-induced pain reduction. The Neurosciences and Music Conference, Helsinki, Finland.
@@ -54,17 +78,20 @@ class: wide
 - **Yi, W.**, Palmer, C., Roy, M. (2023). Effects of musical tempo and individual differences on pain perception. Entrainment Workshop, RITMO, University of Oslo, Norway.
 - **Yi, W.**, Palmer, C., Roy, M. (2023). Effects of musical tempo and spontaneous rates on pain perception. NSERC-CREATE Symposium in Nonlinear Dynamics, Montreal, Canada.
 - Bishop, L., Høffding, S., **Yi, W.**, Laeng, B. (2022). Eyes and hearts of adepts and experts: Physiological rhythms in string quartets. Conference on Music and Eye-tracking, Max Planck Institute for Empirical Aesthetics, Frankfurt, Germany.
-- **Yi, W.** (2021). A pilot study of expressive body movement on audio parameters of piano performances. 2nd Nordic Sound and Music Computing Conference, Aalborg University, Copenhagen, Denmark.
+- **Yi, W.** (2021). A pilot study of expressive body movement on audio parameters of piano performances. The 2nd Nordic Sound and Music Computing Conference, Aalborg University, Copenhagen, Denmark.
 
 
 ### Teaching Experience
+- Teaching Assistant for PSYC315: Computational Psychology (Winter, 2026)
+- Teaching Assistant for PSYC100: Introduction to Psychology (Fall, 2025)
 - Teaching Assistant for PSYC212: Perception (Winter, 2025)
 - Teaching Assistant for PSYC306: Research Methods in Psychology (Fall, 2024)
 - Teaching Assistant for PSYC339: Intro to Applied Psychology (Fall, 2024)
 - Teaching Assistant for PSYC337: Introduction to Psychopathology (Summer, 2024)
 - Teaching Assistant for PSYC212: Perception (Winter, 2024)
 - Teaching Assistant for PSYC352: Research Methods and Laboratory in Cognitive Psychology (Fall, 2023)
+- Honors research project co-supervision (2022-2026): 6 students 
 
 
-Updated: April, 2025
+Updated: Jan 2026
 

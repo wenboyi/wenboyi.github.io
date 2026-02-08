@@ -1,4 +1,5 @@
 remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll  # Used for local preview; GitHub Pages ignores this and uses remote_theme
 
 # Welcome to Jekyll!
 #
@@ -109,9 +110,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : google
+  provider               : "google-gtag"
   google:
-    tracking_id          : G-0LH4SVGEFK
+    tracking_id          : "G-0LH4SVGEFK"
     anonymize_ip         : false
 
 
@@ -135,6 +136,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/wenbo-yi-08725a154/"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.ca/citations?user=9YmflWMAAAAJ&hl=en&oi=ao"
     #- label: "Facebook"
     #  icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
