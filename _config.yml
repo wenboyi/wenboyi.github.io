@@ -1,5 +1,5 @@
 remote_theme: mmistakes/minimal-mistakes
-theme: minimal-mistakes-jekyll  # Used for local preview; GitHub Pages ignores this and uses remote_theme
+# theme: minimal-mistakes-jekyll  # Only for local preview with the gem installed
 
 # Welcome to Jekyll!
 #
