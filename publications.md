@@ -53,7 +53,7 @@ class: wide
 
 - **Yi, W.**, Palmer, C., Serian, A., Roy, M. (2025). Individualizing musical tempo to spontaneous rates maximizes music-induced hypoalgesia. PAIN, doi: 10.1097/j.pain.0000000000003513.
 
-- Høffding, S., **Yi, W.**, Danielsen, A., Jensenius, A. (2025). Introducing the MusicLab Copenhagen Dataset. Music & Science, 8. https://doi.org/10.1177/20592043241303288
+- Høffding, S., ... ,**Yi, W.**,Danielsen, A., Jensenius, A. (2025). Introducing the MusicLab Copenhagen Dataset. Music & Science, 8. https://doi.org/10.1177/20592043241303288
 
 - Høffding, S.\*, **Yi, W.**\*, Lippert, E., Gonzalez Sanchez, V., Bishop, L., Laeng, B., Danielsen, A.,
 Jensenius, A. & Wallot, S. (2023). Into the Hive-mind: Shared absorption and cardiac interrelations in expert and student string quartets. Music & Science, 6, doi: 10.1177/20592043231168597.
