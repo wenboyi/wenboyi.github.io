@@ -17,9 +17,9 @@ My ongoing project focuses on individual differences in cortical oscillations an
 
 Beyond academia, I have a deep passion for classical music. My journey as a concert pianist began at age five, leading to performances in major concert halls and multiple championships at national and provincial levels in China. These experiences have profoundly shaped my interest in music as both an art form and a fundamental perspective on human behavior in science. Nowadays, you can (frequently) find me in Montreal's Place des Arts auditorium.
 
-### Recent Updates
+<h4 style="font-size: 1em; margin-top: 1.2em;">Recent Updates</h4>
 
-<div style="max-height: 400px; overflow-y: auto; padding-right: 10px;">
+<div style="max-height: 400px; overflow-y: auto; padding-right: 10px; font-size: 0.9em;">
 {% for item in site.data.news %}
 <div style="margin-bottom: 15px; padding-left: 10px; border-left: 3px solid #494e52;">
   <strong style="color: #494e52;">{{ item.date }}</strong><br>
