@@ -82,6 +82,8 @@ synchrony in musical dyads. Joint Action Meeting, Turin, Italy.
 
 
 ### Teaching Experience
+- Honors research project co-supervision (2022-2026): 6 students 
+- Teaching Assistant for PSYC305: Stats for Exprimental Design (Summer, 2026)
 - Teaching Assistant for PSYC315: Computational Psychology (Winter, 2026)
 - Teaching Assistant for PSYC100: Introduction to Psychology (Fall, 2025)
 - Teaching Assistant for PSYC212: Perception (Winter, 2025)
@@ -90,8 +92,7 @@ synchrony in musical dyads. Joint Action Meeting, Turin, Italy.
 - Teaching Assistant for PSYC337: Introduction to Psychopathology (Summer, 2024)
 - Teaching Assistant for PSYC212: Perception (Winter, 2024)
 - Teaching Assistant for PSYC352: Research Methods and Laboratory in Cognitive Psychology (Fall, 2023)
-- Honors research project co-supervision (2022-2026): 6 students 
 
 
-Updated: Jan 2026
+Updated: May 2026
 
