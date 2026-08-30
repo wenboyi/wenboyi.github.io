@@ -21,7 +21,7 @@ class: wide
 - **M.A. in Sound Recording**: Communication University of China, China (2019-2020, incomplete)
    - GPA: 3.86/4.0
 - **B.A. in Sound Recording**: Nanjing University of the Arts, China (2015-2019)
-  - GPA: 89.5/100, Rank 1/21
+  - GPA: 89.5/100, Rank 1/281
 
 
 ### Experience
@@ -32,14 +32,14 @@ class: wide
 
 ### Selected Honors and Awards
 - Quebec Science Top 10 Discoveries of the Year (10 découvertes de l'année), 2026
-- Fonds de recherche du Québec Nature et technologies Doctoral Fellowship, 2025-2028 
+- Fonds de recherche du Québec Nature et technologies (FRQNT) Doctoral Fellowship, 2025-2028 
+- McGill Graduate Excellence Award, 2022-2026
 - McGill GREATE Travel Award, 2025
+- Natural Sciences and Engineering Research Council of Canada (NSERC) CREATE Doctoral Award in Complex Dynamics, 2022-2024
 - McGill Wolfe Fellowship, 2024
-- Centre for Research on Brain, Language and Music Graduate Student Award, 2024
-- NSERC-CREATE Graduate Award in Complex Dynamics, 2022-2024
-- Graduate Excellence Award, 2022-2024
-- Centre for Research on Brain, Language and Music Travel Award, 2024
-- Best Poster Award, Symposium in Nonlinear Dynamics, 2023
+- Centre for Research on Brain, Language and Music (CRBLM) Graduate Student Award, 2024
+- Centre for Research on Brain, Language and Music (CRBLM) Travel Award, 2024
+- Best Poster Award, Symposium in Nonlinear Dynamics (Montreal, Canada), 2023
 - Academic Excellence Scholarship, 2020
 - China National Scholarship, 2017
 - First-Class Academic Scholarship, 2016, 2017, 2018, 2019
