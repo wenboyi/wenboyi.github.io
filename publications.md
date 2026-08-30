@@ -24,7 +24,7 @@ class: wide
 
 - **Yi, W.**, & Palmer, C. (2026). Respiratory Synchrony and Individual Differences Causally Influence Dyadic Interpersonal Coordination. Psychophysiology, 63(2), e70254. https://doi.org/10.1111/psyp.70254
 
-- Palmer, C., **Yi, W.**, & Smykovskyi, A. (2026). Synchrony and reciprocity in rhythmic interaction. In press, Annals of the New York Academy of Sciences, 1560, no. 1 (2026): e70326. https://doi.org/10.1111/nyas.70326
+- Palmer, C., **Yi, W.**, & Smykovskyi, A. (2026). Synchrony and reciprocity in rhythmic interaction. Annals of the New York Academy of Sciences, 1560, no. 1 (2026): e70326. https://doi.org/10.1111/nyas.70326
 
 - **Yi, W.**, Palmer, C., Serian, A., Roy, M. (2025). Individualizing musical tempo to spontaneous rates maximizes music-induced hypoalgesia. PAIN, doi: 10.1097/j.pain.0000000000003513.
 
