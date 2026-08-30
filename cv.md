@@ -34,7 +34,7 @@ class: wide
 - Quebec Science Top 10 Discoveries of the Year (10 découvertes de l'année), 2026
 - Fonds de recherche du Québec Nature et technologies Doctoral Fellowship, 2025-2028 
 - McGill GREATE Travel Award, 2025
-- Wolfe Fellowship, 2024
+- McGill Wolfe Fellowship, 2024
 - Centre for Research on Brain, Language and Music Graduate Student Award, 2024
 - NSERC-CREATE Graduate Award in Complex Dynamics, 2022-2024
 - Graduate Excellence Award, 2022-2024
@@ -47,6 +47,8 @@ class: wide
 - First Prize, Second YAMAHA China National Piano Competition, 2016
 
 ### Media Coverage
+- [How songs may help reduce pain - and even treat stroke symptoms](https://www.nationalgeographic.com/health/article/music-prescription-brain-neurological-treatment), National Geographic (August 2026)
+- [Can the tempo of music change how we feel pain?](https://www.facebook.com/watch/?v=1487966469438046), McGill Media Relations (March 2026)
 - [Four McGill studies make Québec Science’s list of the top 10 discoveries of the year](https://reporter.mcgill.ca/four-mcgill-studies-make-quebec-sciences-list-of-the-top-10-discoveries-of-the-year/), McGill Reporter (January 2026)
 - [Atténuer la douleur par le tempo musical](https://www.quebecscience.qc.ca/sciences/les-10-decouvertes-de-2025/attenuer-douleur-tempo-musical/), Québec Science (January 2026)
 - [Finding the right tempo for pain relief](https://cihr-irsc.gc.ca/e/54392.html), Canadian Institutes
@@ -64,6 +66,8 @@ of Health Research (July 2025)
 
 
 ### Talks & Posters
+- **Yi, W.** (2026). Individual Differences in Behavioral, Physiological, and Neural Entrainment during Auditory Perception and Production. Concordia University, Department of Psychology, Montreal, Canada. Invited Talk.
+- **Yi, W.**, Palmer, C. (2026). Inter-brain dynamics track interpersonal respiration and individual differences. S4SN 2026, Annual Meeting of the Society for Social Neuroscience, Montreal, Canada.
 - **Yi, W.**, & Palmer, C. (2025). Testing causal relations between behavioral and physiological 
 dynamics during interpersonal coordination. Meeting of the Society for Psychophysiological Research, 
 Montreal. 
@@ -83,6 +87,7 @@ synchrony in musical dyads. Joint Action Meeting, Turin, Italy.
 
 ### Teaching Experience
 - Honors research project co-supervision (2022-2026): 6 students 
+- Teaching Assistant for PSYC213: Cognition (Fall, 2026)
 - Teaching Assistant for PSYC305: Stats for Exprimental Design (Summer, 2026)
 - Teaching Assistant for PSYC315: Computational Psychology (Winter, 2026)
 - Teaching Assistant for PSYC100: Introduction to Psychology (Fall, 2025)
@@ -94,5 +99,5 @@ synchrony in musical dyads. Joint Action Meeting, Turin, Italy.
 - Teaching Assistant for PSYC352: Research Methods and Laboratory in Cognitive Psychology (Fall, 2023)
 
 
-Updated: May 2026
+Updated: Aug 2026
 
