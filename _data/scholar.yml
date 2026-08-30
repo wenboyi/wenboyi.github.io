@@ -1,0 +1,10 @@
+# Google Scholar metrics rendered at build time so the publications page
+# never shows dashes if live scraping is blocked. Refresh locally with
+#   python3 scripts/update_scholar_stats.py
+# or via the weekly GitHub Action.
+
+citations: 54
+h_index: 3
+i10_index: 2
+updated: "Aug 2026"
+url: "https://scholar.google.ca/citations?user=9YmflWMAAAAJ&hl=en&oi=ao"

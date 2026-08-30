@@ -20,7 +20,7 @@ Beyond academia, I have a deep passion for classical music. My journey as a conc
 <h4 style="font-size: 1em; margin-top: 1.2em;">Recent Updates</h4>
 
 <div style="max-height: 400px; overflow-y: auto; padding-right: 10px; font-size: 0.9em;">
-{% for item in site.data.news %}
+{% for item in site.data.news limit: 3 %}
 <div style="margin-bottom: 15px; padding-left: 10px; border-left: 3px solid #494e52;">
   <strong style="color: #494e52;">{{ item.date }}</strong><br>
   {{ item.content | markdownify | remove: '<p>' | remove: '</p>' }}

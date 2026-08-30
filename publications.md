@@ -6,46 +6,19 @@ author_profile: true
 class: wide
 ---
 
-<div id="scholar-stats" style="font-size: 0.85em; color: #555; margin-bottom: 20px;">
-  <a href="https://scholar.google.ca/citations?user=9YmflWMAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #4285f4;">
+<div id="scholar-stats" data-scholar-id="9YmflWMAAAAJ" style="font-size: 0.85em; color: #555; margin-bottom: 20px;">
+  <a href="{{ site.data.scholar.url }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #4285f4;">
     <i class="fas fa-graduation-cap"></i> Google Scholar
   </a>
   &nbsp;|&nbsp;
-  <span id="scholar-citations">Citations: —</span>
+  <span id="scholar-citations">Citations: <strong>{{ site.data.scholar.citations }}</strong></span>
   &nbsp;|&nbsp;
-  <span id="scholar-hindex">h-index: —</span>
+  <span id="scholar-hindex">h-index: <strong>{{ site.data.scholar.h_index }}</strong></span>
   &nbsp;|&nbsp;
-  <span id="scholar-i10index">i10-index: —</span>
+  <span id="scholar-i10index">i10-index: <strong>{{ site.data.scholar.i10_index }}</strong></span>
+  <span id="scholar-asof"></span>
 </div>
-
-<script>
-(function() {
-  var scholarId = '9YmflWMAAAAJ';
-  var url = 'https://scholar.google.ca/citations?user=' + scholarId + '&hl=en';
-  var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
-
-  fetch(proxyUrl)
-    .then(function(response) { return response.text(); })
-    .then(function(html) {
-      // Google Scholar profile page has a table with citation stats
-      // The table cells contain: Citations, h-index, i10-index (All and Since columns)
-      var parser = new DOMParser();
-      var doc = parser.parseFromString(html, 'text/html');
-      var cells = doc.querySelectorAll('#gsc_rsb_st td.gsc_rsb_std');
-      if (cells.length >= 5) {
-        var citations = cells[0].textContent.trim();
-        var hindex = cells[2].textContent.trim();
-        var i10index = cells[4].textContent.trim();
-        document.getElementById('scholar-citations').textContent = 'Citations: ' + citations;
-        document.getElementById('scholar-hindex').textContent = 'h-index: ' + hindex;
-        document.getElementById('scholar-i10index').textContent = 'i10-index: ' + i10index;
-      }
-    })
-    .catch(function() {
-      // If fetch fails, leave the dashes as placeholder
-    });
-})();
-</script>
+<script src="{{ '/assets/js/scholar-stats.js' | relative_url }}" defer></script>
 
  <sup>*Shared first author* \*</sup> 
 

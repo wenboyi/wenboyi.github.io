@@ -2,6 +2,9 @@
 #   - date: "Month Year"
 #     content: "Your news text here. Supports **Markdown** and [links](url)."
 
+- date: "Aug 2026"
+  content: "Happy to share that a review paper on the relationship between behavioral, emotional, and physiological dynamics in social interaction is now online in the [*Annals of the New York Academy of Sciences*](https://nyaspubs.onlinelibrary.wiley.com/doi/full/10.1111/nyas.70326)!"
+
 - date: "Feb 2026"
   content: "Excited to share that the second paper of my Ph.D. is now online in [*Psychophysiology*](https://onlinelibrary.wiley.com/doi/10.1111/psyp.70254)! This paper investigates how individuals synchronize respiration and heart in joint action."
 
