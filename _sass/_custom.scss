@@ -5,8 +5,10 @@ body {
   line-height: 1.6;
 }
 
-h1 {
-  font-size: 1.6em;
+h1,
+.page__title,
+.site-title {
+  font-size: 1.28em;
 }
 
 h2 {
