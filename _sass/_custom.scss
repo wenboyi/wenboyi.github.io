@@ -1,0 +1,131 @@
+/* Site-specific styles (compiled into both light and dark skins) */
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 1em;
+}
+
+.author__avatar {
+  img {
+    max-width: 180px;
+    border-radius: 10%;
+  }
+}
+
+.sidebar .author__avatar {
+  img {
+    padding: 4px;
+    border: none;
+    max-width: 180px;
+    width: 100%;
+  }
+}
+
+// Shared column: Home / Publications / Brief CV (previous CV & Publications layout)
+.wide .page__inner-wrap,
+.layout--home .archive > * {
+  max-width: 729px;
+}
+
+.cv-subtitle {
+  font-size: 0.9em;
+  color: $muted-text-color;
+  margin-top: 0.15em;
+  margin-bottom: 1.4em;
+
+  .cv-email {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.2em;
+    color: $link-color;
+    text-decoration: none;
+    vertical-align: middle;
+
+    &:hover,
+    &:focus {
+      color: $link-color-hover;
+    }
+  }
+}
+
+.theme__toggle {
+  flex-shrink: 0;
+
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+
+  .theme__icon--sun {
+    display: none;
+  }
+}
+
+html[data-theme="dark"] .theme__toggle {
+  .theme__icon--sun {
+    display: inline-block;
+  }
+
+  .theme__icon--moon {
+    display: none;
+  }
+}
+
+.theme__toggle .theme__icon[hidden] {
+  display: none !important;
+}
+
+.recent-updates__title {
+  font-size: 1em;
+  margin-top: 1.2em;
+}
+
+.news-feed {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  font-size: 0.9em;
+}
+
+.news-item {
+  margin-bottom: 15px;
+  padding-left: 10px;
+  border-left: 3px solid $primary-color;
+}
+
+.news-date {
+  color: $text-color;
+}
+
+.contact-card {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: $form-background-color;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.scholar-stats {
+  font-size: 0.85em;
+  color: $muted-text-color;
+  margin-bottom: 20px;
+
+  a {
+    text-decoration: none;
+    color: $link-color;
+  }
+}

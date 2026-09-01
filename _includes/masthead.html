@@ -22,12 +22,11 @@
             </li>
           {%- endfor -%}
         </ul>
-        {% if site.search == true %}
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="fas fa-search"></i>
+        <button class="search__toggle theme__toggle" type="button" aria-pressed="false" title="{{ site.data.ui-text[site.locale].theme_toggle_dark | default: 'Switch to dark mode' }}">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].theme_toggle_label | default: "Toggle color theme" }}</span>
+          <i class="fas fa-moon theme__icon theme__icon--moon" aria-hidden="true"></i>
+          <i class="fas fa-sun theme__icon theme__icon--sun" aria-hidden="true"></i>
         </button>
-        {% endif %}
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
           <div class="navicon"></div>

@@ -63,17 +63,66 @@
 <script type="text/javascript">
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
   
+  (function () {
+    var lightHref = "/assets/css/main.css";
+    var darkHref = "/assets/css/main-dark.css";
+    var darkLabel = "Switch to dark mode";
+    var lightLabel = "Switch to light mode";
+
+    function getTheme() {
+      try {
+        var stored = localStorage.getItem("theme");
+        if (stored === "dark" || stored === "light") return stored;
+      } catch (e) {}
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function applyTheme(theme, persist) {
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
+      document.documentElement.style.backgroundColor = theme === "dark" ? "#252a34" : "#fff";
+      var link = document.getElementById("theme-stylesheet");
+      if (link) link.href = theme === "dark" ? darkHref : lightHref;
+      var button = document.querySelector(".theme__toggle");
+      if (button) {
+        var label = theme === "dark" ? lightLabel : darkLabel;
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
+        button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+        var sun = button.querySelector(".theme__icon--sun");
+        var moon = button.querySelector(".theme__icon--moon");
+        if (sun) sun.hidden = theme !== "dark";
+        if (moon) moon.hidden = theme === "dark";
+      }
+      if (persist) {
+        try { localStorage.setItem("theme", theme); } catch (e) {}
+      }
+    }
+
+    var theme = getTheme();
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
+    document.documentElement.style.backgroundColor = theme === "dark" ? "#252a34" : "#fff";
+    document.write('<link rel="stylesheet" href="' + (theme === "dark" ? darkHref : lightHref) + '" id="theme-stylesheet">');
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var button = document.querySelector(".theme__toggle");
+      if (!button) return;
+      applyTheme(getTheme(), false);
+      button.addEventListener("click", function () {
+        var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        applyTheme(next, true);
+      });
+    });
+  })();
 </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
+<noscript>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</noscript>
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
-
-  
-    <script src="/assets/css/main.css"></script>
-  
 
 
     <!-- start custom head snippets -->
@@ -93,7 +142,7 @@
 
   </head>
 
-  <body class="layout--single" dir="ltr">
+  <body class="layout--single wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -124,14 +173,13 @@
                 href="/cv/"
                 
                 
-              >Curriculum Vitae</a>
+              >Brief CV</a>
             </li></ul>
-        
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
+        <button class="search__toggle theme__toggle" type="button" aria-pressed="false" title="Switch to dark mode">
+          <span class="visually-hidden">Toggle color theme</span>
+          <i class="fas fa-moon theme__icon theme__icon--moon" aria-hidden="true"></i>
+          <i class="fas fa-sun theme__icon theme__icon--sun" aria-hidden="true"></i>
         </button>
-        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
@@ -294,65 +342,40 @@
 
       <section class="page__content" itemprop="text">
         
-        <div id="scholar-stats" style="font-size: 0.85em; color: #555; margin-bottom: 20px;">
-  <a href="https://scholar.google.ca/citations?user=9YmflWMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #4285f4;">
+        <div id="scholar-stats" class="scholar-stats" data-scholar-id="9YmflWMAAAAJ">
+  <a href="https://scholar.google.ca/citations?user=9YmflWMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">
     <i class="fas fa-graduation-cap"></i> Google Scholar
   </a>
   &nbsp;|&nbsp;
-  <span id="scholar-citations">Citations: —</span>
+  <span id="scholar-citations">Citations: <strong>54</strong></span>
   &nbsp;|&nbsp;
-  <span id="scholar-hindex">h-index: —</span>
+  <span id="scholar-hindex">h-index: <strong>3</strong></span>
   &nbsp;|&nbsp;
-  <span id="scholar-i10index">i10-index: —</span>
+  <span id="scholar-i10index">i10-index: <strong>2</strong></span>
+  <span id="scholar-asof"></span>
 </div>
+<script src="/assets/js/scholar-stats.js" defer=""></script>
 
-<script>
-(function() {
-  var scholarId = '9YmflWMAAAAJ';
-  var url = 'https://scholar.google.ca/citations?user=' + scholarId + '&hl=en';
-  var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
-
-  fetch(proxyUrl)
-    .then(function(response) { return response.text(); })
-    .then(function(html) {
-      // Google Scholar profile page has a table with citation stats
-      // The table cells contain: Citations, h-index, i10-index (All and Since columns)
-      var parser = new DOMParser();
-      var doc = parser.parseFromString(html, 'text/html');
-      var cells = doc.querySelectorAll('#gsc_rsb_st td.gsc_rsb_std');
-      if (cells.length >= 5) {
-        var citations = cells[0].textContent.trim();
-        var hindex = cells[2].textContent.trim();
-        var i10index = cells[4].textContent.trim();
-        document.getElementById('scholar-citations').textContent = 'Citations: ' + citations;
-        document.getElementById('scholar-hindex').textContent = 'h-index: ' + hindex;
-        document.getElementById('scholar-i10index').textContent = 'i10-index: ' + i10index;
-      }
-    })
-    .catch(function() {
-      // If fetch fails, leave the dashes as placeholder
-    });
-})();
-</script>
-
-<p><sup><em>Shared first author</em> *</sup></p>
+<p><sup>*</sup> Shared first author</p>
 
 <ul>
   <li>
     <p><strong>Yi, W.</strong>, &amp; Palmer, C. (2026). Respiratory Synchrony and Individual Differences Causally Influence Dyadic Interpersonal Coordination. Psychophysiology, 63(2), e70254. https://doi.org/10.1111/psyp.70254</p>
   </li>
   <li>
-    <p><strong>Yi, W.</strong>, Palmer, C., Serian, A., Roy, M. (2025). Individualizing musical tempo to spontaneous rates maximizes music-induced hypoalgesia. PAIN, doi: 10.1097/j.pain.0000000000003513.</p>
+    <p>Palmer, C., <strong>Yi, W.</strong>, &amp; Smykovskyi, A. (2026). Synchrony and reciprocity in rhythmic interaction. Annals of the New York Academy of Sciences, 1560, no. 1 (2026): e70326. https://doi.org/10.1111/nyas.70326</p>
   </li>
   <li>
-    <p>Høffding, S., <strong>Yi, W.</strong>, Danielsen, A., Jensenius, A. (2025). Introducing the MusicLab Copenhagen Dataset. Music &amp; Science, 8. https://doi.org/10.1177/20592043241303288</p>
+    <p><strong>Yi, W.</strong>, Palmer, C., Serian, A., &amp; Roy, M. (2025). Individualizing musical tempo to spontaneous rates maximizes music-induced hypoalgesia. PAIN, doi: 10.1097/j.pain.0000000000003513.</p>
   </li>
   <li>
-    <p>Høffding, S.*, <strong>Yi, W.</strong>*, Lippert, E., Gonzalez Sanchez, V., Bishop, L., Laeng, B., Danielsen, A.,
-Jensenius, A. &amp; Wallot, S. (2023). Into the Hive-mind: Shared absorption and cardiac interrelations in expert and student string quartets. Music &amp; Science, 6, doi: 10.1177/20592043231168597.</p>
+    <p>Høffding, S., …, <strong>Yi, W.</strong>, Danielsen, A., &amp; Jensenius, A. (2025). Introducing the MusicLab Copenhagen Dataset. Music &amp; Science, 8. https://doi.org/10.1177/20592043241303288</p>
   </li>
   <li>
-    <p><strong>Yi, W.</strong> (2022). When hearts beat as one: cardiac dynamics and synchrony in string quartet performances. Master’s thesis. University of Oslo.</p>
+    <p>Høffding, S.*, <strong>Yi, W.</strong>*, Lippert, E., Gonzalez Sanchez, V., Bishop, L., Laeng, B., Danielsen, A., Jensenius, A., &amp; Wallot, S. (2023). Into the Hive-mind: Shared absorption and cardiac interrelations in expert and student string quartets. Music &amp; Science, 6, doi: 10.1177/20592043231168597.</p>
+  </li>
+  <li>
+    <p><strong>Yi, W.</strong> (2022). When hearts beat as one: cardiac dynamics and synchrony in string quartet performances. Master’s thesis, University of Oslo.</p>
   </li>
   <li>
     <p><strong>Yi, W.</strong> (2022). The reproduction of auditory spatial perception in classical music recordings. Audio Engineering, 2022, 46(7). [In Chinese].</p>
@@ -361,7 +384,7 @@ Jensenius, A. &amp; Wallot, S. (2023). Into the Hive-mind: Shared absorption and
     <p><strong>Yi, W.</strong> (2021). A pilot study of expressive body movement on audio parameters of piano performances. Proceedings of the 2nd Nordic Sound and Music Computing Conference, 24, Copenhagen, Denmark.</p>
   </li>
   <li>
-    <p>Hu, Z. &amp; <strong>Yi, W.</strong> (2021). An introduction to the impact of developments in audio technology on the concept of music mixing composition. Advanced Motion Picture Technology, 2021 (05). [In Chinese].</p>
+    <p>Hu, Z., &amp; <strong>Yi, W.</strong> (2021). An introduction to the impact of developments in audio technology on the concept of music mixing composition. Advanced Motion Picture Technology, 2021 (05). [In Chinese].</p>
   </li>
 </ul>
 
@@ -393,19 +416,6 @@ Jensenius, A. &amp; Wallot, S. (2023). Into the Hive-mind: Shared absorption and
       
     </div>
 
-    
-      <div class="search-content">
-        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" role="search">
-    <label class="sr-only" for="cse-search-input-box-id">
-      Enter your search term...
-    </label>
-    <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  </form>
-  <div id="results" class="results">
-    <gcse:searchresults-only></gcse:searchresults-only>
-  </div></div>
-
-      </div>
     
 
     <div id="footer" class="page__footer">
@@ -469,38 +479,18 @@ Jensenius, A. &amp; Wallot, S. (2023). Into the Hive-mind: Shared absorption and
 
     
   <script src="/assets/js/main.min.js"></script>
-
-
-<script>
-  (function () {
-    var cx = '';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-
-  function googleCustomSearchExecute() {
-    var input = document.getElementById('cse-search-input-box-id');
-    var element = google.search.cse.element.getElement('searchresults-only0');
-    if (input.value == '') {
-      element.clearAllResults();
-    } else {
-      element.execute(input.value);
-    }
-    return false;
-  }
-
-  
-    $(document).ready(function () {
-      $('input#cse-search-input-box-id').on('keyup', function () {
-        googleCustomSearchExecute();
+  <script>
+    // Masthead button reuses search__toggle so greedy-nav reserves space;
+    // drop the search overlay handler so clicks only switch the theme.
+    if (window.jQuery) {
+      jQuery(function ($) {
+        $(".search__toggle.theme__toggle").off("click");
       });
-    });
-  
-</script>
+    }
+  </script>
+
+
+
 
 
 

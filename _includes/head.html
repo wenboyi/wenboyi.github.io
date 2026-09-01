@@ -14,10 +14,63 @@
   {% if site.enable_copy_code_button -%}
     window.enable_copy_code_button = true;
   {%- endif %}
+  (function () {
+    var lightHref = "{{ '/assets/css/main.css' | relative_url }}";
+    var darkHref = "{{ '/assets/css/main-dark.css' | relative_url }}";
+    var darkLabel = {{ site.data.ui-text[site.locale].theme_toggle_dark | default: "Switch to dark mode" | jsonify }};
+    var lightLabel = {{ site.data.ui-text[site.locale].theme_toggle_light | default: "Switch to light mode" | jsonify }};
+
+    function getTheme() {
+      try {
+        var stored = localStorage.getItem("theme");
+        if (stored === "dark" || stored === "light") return stored;
+      } catch (e) {}
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function applyTheme(theme, persist) {
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
+      document.documentElement.style.backgroundColor = theme === "dark" ? "#252a34" : "#fff";
+      var link = document.getElementById("theme-stylesheet");
+      if (link) link.href = theme === "dark" ? darkHref : lightHref;
+      var button = document.querySelector(".theme__toggle");
+      if (button) {
+        var label = theme === "dark" ? lightLabel : darkLabel;
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
+        button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+        var sun = button.querySelector(".theme__icon--sun");
+        var moon = button.querySelector(".theme__icon--moon");
+        if (sun) sun.hidden = theme !== "dark";
+        if (moon) moon.hidden = theme === "dark";
+      }
+      if (persist) {
+        try { localStorage.setItem("theme", theme); } catch (e) {}
+      }
+    }
+
+    var theme = getTheme();
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
+    document.documentElement.style.backgroundColor = theme === "dark" ? "#252a34" : "#fff";
+    document.write('<link rel="stylesheet" href="' + (theme === "dark" ? darkHref : lightHref) + '" id="theme-stylesheet">');
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var button = document.querySelector(".theme__toggle");
+      if (!button) return;
+      applyTheme(getTheme(), false);
+      button.addEventListener("click", function () {
+        var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        applyTheme(next, true);
+      });
+    });
+  })();
 </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<noscript>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</noscript>
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 

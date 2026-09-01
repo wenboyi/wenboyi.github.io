@@ -4,6 +4,15 @@
   {% endfor %}
 {% else %}
   <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+  <script>
+    // Masthead button reuses search__toggle so greedy-nav reserves space;
+    // drop the search overlay handler so clicks only switch the theme.
+    if (window.jQuery) {
+      jQuery(function ($) {
+        $(".search__toggle.theme__toggle").off("click");
+      });
+    }
+  </script>
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}

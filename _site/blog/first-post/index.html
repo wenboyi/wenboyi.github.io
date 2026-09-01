@@ -67,17 +67,66 @@
 <script type="text/javascript">
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
   
+  (function () {
+    var lightHref = "/assets/css/main.css";
+    var darkHref = "/assets/css/main-dark.css";
+    var darkLabel = "Switch to dark mode";
+    var lightLabel = "Switch to light mode";
+
+    function getTheme() {
+      try {
+        var stored = localStorage.getItem("theme");
+        if (stored === "dark" || stored === "light") return stored;
+      } catch (e) {}
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function applyTheme(theme, persist) {
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
+      document.documentElement.style.backgroundColor = theme === "dark" ? "#252a34" : "#fff";
+      var link = document.getElementById("theme-stylesheet");
+      if (link) link.href = theme === "dark" ? darkHref : lightHref;
+      var button = document.querySelector(".theme__toggle");
+      if (button) {
+        var label = theme === "dark" ? lightLabel : darkLabel;
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
+        button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+        var sun = button.querySelector(".theme__icon--sun");
+        var moon = button.querySelector(".theme__icon--moon");
+        if (sun) sun.hidden = theme !== "dark";
+        if (moon) moon.hidden = theme === "dark";
+      }
+      if (persist) {
+        try { localStorage.setItem("theme", theme); } catch (e) {}
+      }
+    }
+
+    var theme = getTheme();
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
+    document.documentElement.style.backgroundColor = theme === "dark" ? "#252a34" : "#fff";
+    document.write('<link rel="stylesheet" href="' + (theme === "dark" ? darkHref : lightHref) + '" id="theme-stylesheet">');
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var button = document.querySelector(".theme__toggle");
+      if (!button) return;
+      applyTheme(getTheme(), false);
+      button.addEventListener("click", function () {
+        var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        applyTheme(next, true);
+      });
+    });
+  })();
 </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
+<noscript>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</noscript>
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
-
-  
-    <script src="/assets/css/main.css"></script>
-  
 
 
     <!-- start custom head snippets -->
@@ -128,14 +177,13 @@
                 href="/cv/"
                 
                 
-              >Curriculum Vitae</a>
+              >Brief CV</a>
             </li></ul>
-        
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
+        <button class="search__toggle theme__toggle" type="button" aria-pressed="false" title="Switch to dark mode">
+          <span class="visually-hidden">Toggle color theme</span>
+          <i class="fas fa-moon theme__icon theme__icon--moon" aria-hidden="true"></i>
+          <i class="fas fa-sun theme__icon theme__icon--sun" aria-hidden="true"></i>
         </button>
-        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
@@ -402,19 +450,6 @@
     </div>
 
     
-      <div class="search-content">
-        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" role="search">
-    <label class="sr-only" for="cse-search-input-box-id">
-      Enter your search term...
-    </label>
-    <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  </form>
-  <div id="results" class="results">
-    <gcse:searchresults-only></gcse:searchresults-only>
-  </div></div>
-
-      </div>
-    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -477,38 +512,18 @@
 
     
   <script src="/assets/js/main.min.js"></script>
-
-
-<script>
-  (function () {
-    var cx = '';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-
-  function googleCustomSearchExecute() {
-    var input = document.getElementById('cse-search-input-box-id');
-    var element = google.search.cse.element.getElement('searchresults-only0');
-    if (input.value == '') {
-      element.clearAllResults();
-    } else {
-      element.execute(input.value);
-    }
-    return false;
-  }
-
-  
-    $(document).ready(function () {
-      $('input#cse-search-input-box-id').on('keyup', function () {
-        googleCustomSearchExecute();
+  <script>
+    // Masthead button reuses search__toggle so greedy-nav reserves space;
+    // drop the search overlay handler so clicks only switch the theme.
+    if (window.jQuery) {
+      jQuery(function ($) {
+        $(".search__toggle.theme__toggle").off("click");
       });
-    });
-  
-</script>
+    }
+  </script>
+
+
+
 
 
 

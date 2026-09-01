@@ -15,7 +15,7 @@ remote_theme: mmistakes/minimal-mistakes
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # light theme; dark mode uses the official "dark" skin via main-dark.css
 
 # Site Settings
 locale                   : "en-US"
@@ -73,7 +73,7 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : true
-search                   : true
+search                   : false
 search_full_content      : true
 search_provider          : google
 lunr:
@@ -275,9 +275,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-# Add this line
-head_scripts:
-  - /assets/css/main.css
+# Theme toggle loads light/dark CSS from assets/css/main.css and main-dark.css
 
 # mimic GitHub Pages with --safe
 whitelist:
