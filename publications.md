@@ -22,6 +22,8 @@ classes: wide
 
 <sup>*</sup> Shared first author 
 
+- **Yi, W.**, & Palmer, C. (2026). Respiration and individual differences shape behavioral and inter-brain synchronization. BioRxiv. https://doi.org/10.64898/2026.09.28.755199
+
 - **Yi, W.**, & Palmer, C. (2026). Respiratory Synchrony and Individual Differences Causally Influence Dyadic Interpersonal Coordination. Psychophysiology, 63(2), e70254. https://doi.org/10.1111/psyp.70254
 
 - Palmer, C., **Yi, W.**, & Smykovskyi, A. (2026). Synchrony and reciprocity in rhythmic interaction. Annals of the New York Academy of Sciences, 1560, no. 1 (2026): e70326. https://doi.org/10.1111/nyas.70326
