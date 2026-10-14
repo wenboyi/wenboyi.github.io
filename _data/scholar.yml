@@ -3,7 +3,7 @@
 #   python3 scripts/update_scholar_stats.py
 # or via the weekly GitHub Action.
 
-citations: 57
+citations: 61
 h_index: 3
 i10_index: 2
 updated: "Oct 2026"
